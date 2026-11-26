@@ -29,7 +29,7 @@ class CircularLinkedList:
             new_node = self.tail.next
             self.tail.next = new_node
             self.tail = new_node
-        def traverse(self):
+    def traverse(self):
             if self.tail is None:
                 return
             current = self.tail.next
@@ -39,7 +39,7 @@ class CircularLinkedList:
                 if current == self.tail.next:
                     break
             print("(back to head)")
-        def search(self, value):
+    def search(self, value):
             if self.tail is None:
                 return False
             current = self.tail.next
@@ -50,7 +50,7 @@ class CircularLinkedList:
                 if current == self.tail.next:
                     break
             return False
-        def delete (self, value):
+    def delete (self, value):
             if self.tail is None:
                 return
             current = self.tail.next
@@ -71,3 +71,11 @@ class CircularLinkedList:
                     break
 #display results
     
+inserr = CircularLinkedList()
+
+inserr.insert_into_empty(10)
+inserr.insert_at_end(20)
+inserr.insert_at_end(30)
+inserr.insert_at_beginning(5)
+
+inserr.traverse()
