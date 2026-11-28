@@ -33,3 +33,30 @@ while True:
 for cust in customers:
     print(cust['fname1'], cust['lname1'])
 #recursion
+def factorial(num):
+    if num <= 1:
+        return 1
+    else:
+        result= num * factorial(num - 1)
+        return result
+print("4!=", factorial(5))
+
+#simple fibonaccci principle
+def fib(n):
+    if n ==0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        result= fib(n-1) + fib(n-2)
+        return result
+
+print(fib(5))
+
+friends={
+    "Sospeter": "071888888888",
+    "Linet":"23456678889",
+    "Rolex Oluoch": "56667766556"
+}
+for key in friends:
+    print(key, ":", friends[key])
